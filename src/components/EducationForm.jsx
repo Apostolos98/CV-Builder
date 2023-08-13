@@ -8,8 +8,7 @@ export default function EducationForm({educations, setEducations, id, setForm}) 
         setEducations(newEd)
     }
     return (
-        <section className='education'>
-            <h1 className='education-h1'>Education</h1>
+        <section className='education-form'>
             <form action="" onSubmit={(e) => {e.preventDefault(); setForm(null)}}>
                 <label>
                     <p>School/Univerity</p>

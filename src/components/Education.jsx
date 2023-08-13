@@ -32,15 +32,18 @@ export default function Education({educations, setEducations}) {
     })
 
     return (
-        <section>
-            {Object.keys(educations).map((el) => {
-                 return (
-                    <div onClick={() => {ShowForm(el)}} key={el}>
-                        {educations[el].name}
-                    </div>
-                 )
-            })}
-            <button onClick={handleClick}>+ Education</button>
+        <section className="education   ">
+            <h1 className="education-h1">Education</h1>
+                {Object.keys(educations).map((el, ind, arr) => {
+                    return (
+                        <div onClick={() => {ShowForm(el)}} key={el} className={"education-divs" + (ind===arr.length - 1?' last-div':'')}>
+                            {educations[el].name}
+                        </div>
+                    )
+                })}
+            <div className="button-cont">
+                <button onClick={handleClick}><i id="button-i">+</i><p>Education</p></button>
+            </div>
             {formIdForRender !== null ? (
                 <EducationForm
                     educations={educations}
