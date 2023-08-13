@@ -1,0 +1,42 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+div.cont {
+    display: flex;
+}
+
+label > input {
+    background-color: rgb(240, 240, 240);
+    width: 95%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 85, 255, 0);
+    margin-top: 5px;
+    transition: border 0.4s, box-shadow 0.4s;
+}
+
+label > input::placeholder {
+    color: rgb(89, 89, 89);
+}
+
+label > input:focus {
+    border: 1px solid rgb(0, 85, 255);
+    box-shadow: 0px 0px 10px rgba(0, 85, 255, 0.495);
+    outline: none;
+}
+
+label {
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 550;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

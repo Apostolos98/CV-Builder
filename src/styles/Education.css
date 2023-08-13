@@ -1,0 +1,13 @@
+section.education {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+section.education > form {
+    display: flex;
+    flex-direction: column;
+}
+.education-h1 {
+    font-size: 1.5em;
+}
