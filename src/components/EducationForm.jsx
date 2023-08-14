@@ -38,8 +38,10 @@ export default function EducationForm({educations, setEducations, id, setForm}) 
                         onChange={(e) => setEducations({...educations, [id]:{...educations[id], date:e.target.value}})}
                     />
                 </label>
-                <button type='button' onClick={() => deleteId(id)}>Delete</button>
-                <button type="submit">Save</button>
+                <div className='buttons-save-del-cont'>
+                    <button type='button' onClick={() => deleteId(id)} id='delete'>Delete</button>
+                    <button type="submit" id='save'>Save</button>
+                </div>
             </form>
         </section>
     )    

@@ -1,7 +1,12 @@
 section.education-form {
-    padding: 20px;
-    border-radius: 10px;
+    padding: 23px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 91%;
 }
 
 section.education-form > form {
@@ -12,6 +17,7 @@ section.education-form > form {
 .education {
     background-color: white;
     border-radius: 10px;
+    margin-top: 40px;
 }
 
 .button-cont > button {
@@ -58,4 +64,39 @@ section.education-form > form {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 10px;
+}
+
+.education-inner-cont {
+    position: relative;
+}
+
+.buttons-save-del-cont {
+    position: relative;
+}
+
+#delete {
+    border: 1px solid rgb(98, 98, 98);
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    color: rgb(114, 114, 114);
+    font-weight: 550;
+}
+
+#save {
+    border: 0;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #187ff5;
+    color: white;
+    font-weight: 550;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
 }

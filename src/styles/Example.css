@@ -1,0 +1,23 @@
+.example-cont {
+    display: flex;
+    background-color: white;
+    margin-bottom: 30px;
+    min-height: 50px;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.example-clear {
+    color: #b91c1c;
+}
+
+.example-load {
+    background-color: rgb(219, 219, 219);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    font-weight: 550
+}
