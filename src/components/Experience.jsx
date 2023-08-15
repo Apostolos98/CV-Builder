@@ -46,16 +46,6 @@ export default function Experience({experiences, setExperiences, formIdForRender
         <section className="education">
             <h1 className="education-h1">Experience</h1>
             <div className="education-inner-cont">
-                {Object.keys(experiences).map((el, ind, arr) => {
-                        return (
-                            <div onClick={() => {ShowForm(el)}} key={el} className={"education-divs" + (ind===arr.length - 1?' last-div':'')}>
-                                {experiences[el].name}
-                            </div>
-                        )
-                    })}
-                <div className="button-cont">
-                    <button onClick={handleClick}><i id="button-i">+</i><p>Experience</p></button>
-                </div>
                 {formIdForRenderExp !== null ? (
                     <ExperienceForm
                         experiences={experiences}
@@ -63,7 +53,18 @@ export default function Experience({experiences, setExperiences, formIdForRender
                         id={formIdForRenderExp}
                         setFormExp={setFormExp}
                     />
-                ) : null}
+                ) : <>
+                    {Object.keys(experiences).map((el, ind, arr) => {
+                            return (
+                                <div onClick={() => {ShowForm(el)}} key={el} className={"education-divs" + (ind===arr.length - 1?' last-div':'')}>
+                                    {experiences[el].name}
+                                </div>
+                            )
+                        })}
+                    <div className="button-cont">
+                        <button onClick={handleClick}><i id="button-i">+</i><p>Experience</p></button>
+                    </div>
+                </>}
             </div>
         </section>
     )

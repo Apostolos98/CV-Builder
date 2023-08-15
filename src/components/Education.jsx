@@ -14,7 +14,6 @@ export default function Education({educations, setEducations, formIdForRenderEdu
         )        
         setId(id + 'a')
     }
-    console.log(educations, id)
 
     const ShowForm = (el) => {
         if (formIdForRenderEdu === null) {
@@ -36,24 +35,34 @@ export default function Education({educations, setEducations, formIdForRenderEdu
         <section className="education">
             <h1 className="education-h1">Education</h1>
             <div className="education-inner-cont">
-                {Object.keys(educations).map((el, ind, arr) => {
-                        return (
-                            <div onClick={() => {ShowForm(el)}} key={el} className={"education-divs" + (ind===arr.length - 1?' last-div':'')}>
-                                {educations[el].name}
-                            </div>
-                        )
-                    })}
+            {formIdForRenderEdu !== null ? (
+                <EducationForm
+                educations={educations}
+                setEducations={setEducations}
+                id={formIdForRenderEdu}
+                setFormEdu={setFormEdu}
+                />
+            ) : (
+                <>
+                {Object.keys(educations).map((el, ind, arr) => (
+                    <div
+                    onClick={() => {
+                        ShowForm(el);
+                    }}
+                    key={el}
+                    className={"education-divs" + (ind === arr.length - 1 ? ' last-div' : '')}
+                    >
+                    {educations[el].name}
+                    </div>
+                ))}
                 <div className="button-cont">
-                    <button onClick={handleClick}><i id="button-i">+</i><p>Education</p></button>
+                    <button onClick={handleClick}>
+                    <i id="button-i">+</i>
+                    <p>Education</p>
+                    </button>
                 </div>
-                {formIdForRenderEdu !== null ? (
-                    <EducationForm
-                        educations={educations}
-                        setEducations={setEducations}
-                        id={formIdForRenderEdu}
-                        setFormEdu={setFormEdu}
-                    />
-                ) : null}
+                </>
+            )}
             </div>
         </section>
     )
