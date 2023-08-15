@@ -1,6 +1,6 @@
 import '../styles/Example.css'
 
-export default function Example({setEducations, setName, setEmail, setLoc, setNumber, setExperiences}) {
+export default function Example({setEducations, setName, setEmail, setLoc, setNumber, setExperiences, setFormEdu, setFormExp}) {
     const handleClear = () => {
         setEducations({})
         setEmail('')
@@ -8,6 +8,8 @@ export default function Example({setEducations, setName, setEmail, setLoc, setNu
         setName('')
         setNumber('')
         setExperiences({})
+        setFormEdu(null)
+        setFormExp(null)
     }
 
     const handleLoad = () => {
@@ -24,6 +26,8 @@ export default function Example({setEducations, setName, setEmail, setLoc, setNu
                             endDate: '2022-05-09',
                             desc: 'Assisted lead economists in analyzing market trends for sustainable technologies. Developed and tested economic models, refining accuracy. Generated user-friendly guides for efficient integration of new analysts.'
                         }})
+        setFormEdu(null)
+        setFormExp(null)
     }
     return (
         <div className="example-cont">

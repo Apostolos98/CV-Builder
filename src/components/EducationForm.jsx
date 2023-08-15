@@ -1,15 +1,15 @@
 import '../styles/Education.css'
 
-export default function EducationForm({educations, setEducations, id, setForm}) {
+export default function EducationForm({educations, setEducations, id, setFormEdu}) {
     const deleteId = (key) => {
         const newEd = {...educations}
         delete newEd[key]
-        setForm(null)
+        setFormEdu(null)
         setEducations(newEd)
     }
     return (
         <section className='education-form'>
-            <form action="" onSubmit={(e) => {e.preventDefault(); setForm(null)}}>
+            <form action="" onSubmit={(e) => {e.preventDefault(); setFormEdu(null)}}>
                 <label>
                     <p>School/Univerity</p>
                     <input 

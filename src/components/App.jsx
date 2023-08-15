@@ -7,6 +7,8 @@ import Example from './Example'
 import Experience from './Experience'
 
 function App() {
+  const [formIdForRenderEdu, setFormEdu] = useState(null)
+  const [formIdForRenderExp, setFormExp] = useState(null)
   const [name, setName] = useState('Emily Johnson')
   const [email, setEmail] = useState('emily.johnson123@example.com')
   const [number, setNumber] = useState(306912345678)
@@ -29,10 +31,10 @@ function App() {
   return (
     <div className='cont'>
       <div className='first-col'>
-        <Example setEducations={setEducations} setEmail={setEmail} setName={setName} setNumber={setNumber} setLoc={setLoc} setExperiences={setExperiences}/>
+        <Example setEducations={setEducations} setEmail={setEmail} setName={setName} setNumber={setNumber} setLoc={setLoc} setExperiences={setExperiences} setFormEdu={setFormEdu} setFormExp={setFormExp}/>
         <PersonalDetails name={name} setName={setName} email={email} setEmail={setEmail} number={number} setNumber={setNumber} loc={loc} setLoc={setLoc}/>
-        <Education educations={educations} setEducations={setEducations}/>
-        <Experience experiences={experiences} setExperiences={setExperiences}/>
+        <Education educations={educations} setEducations={setEducations} formIdForRenderEdu={formIdForRenderEdu} setFormEdu={setFormEdu}/>
+        <Experience experiences={experiences} setExperiences={setExperiences} formIdForRenderExp={formIdForRenderExp} setFormExp={setFormExp}/>
       </div>
       <Cv name={name} email={email} number={number} loc={loc} educations={educations}/>
     </div>

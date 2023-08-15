@@ -2,8 +2,7 @@ import ExperienceForm from './ExperienceForm';
 import { useState } from "react";
 import '../styles/Education.css';
 
-export default function Experience({experiences, setExperiences}) {
-    const [formIdForRender, setForm] = useState(null)
+export default function Experience({experiences, setExperiences, formIdForRenderExp, setFormExp}) {
     const [id, setId] = useState('a')
     const handleClick = () => {
         setExperiences(
@@ -17,20 +16,29 @@ export default function Experience({experiences, setExperiences}) {
     }
 
     const ShowForm = (el) => {
-        if (formIdForRender === null) {
-            setForm(el)
+        if (formIdForRenderExp === null) {
+            setFormExp(el)
         }
-        else if (formIdForRender !== null && el !== formIdForRender) {
-            setForm(el)
+        else if (formIdForRenderExp !== null && el !== formIdForRenderExp) {
+            setFormExp(el)
         }
-        else setForm(null)
+        else setFormExp(null)
     }
 
-    Object.keys(experiences).map((el) => {
-        if (experiences[el].name === '' && (formIdForRender === null || formIdForRender !== el)) {
-            setForm(el)
+    const handleFormVisibility = (el) => {
+        if (formIdForRenderExp === null || el !== formIdForRenderExp) {
+          setFormExp(el);
+        } else {
+          setFormExp(null);
         }
-    })
+      };
+    
+      // Call handleFormVisibility function wherever needed
+      Object.keys(experiences).forEach((el) => {
+        if (experiences[el].name === '' && (formIdForRenderExp === null || formIdForRenderExp !== el)) {
+          handleFormVisibility(el);
+        }
+      });
 
     return (
         <section className="education">
@@ -46,12 +54,12 @@ export default function Experience({experiences, setExperiences}) {
                 <div className="button-cont">
                     <button onClick={handleClick}><i id="button-i">+</i><p>Experience</p></button>
                 </div>
-                {formIdForRender !== null ? (
+                {formIdForRenderExp !== null ? (
                     <ExperienceForm
                         experiences={experiences}
                         setExperiences={setExperiences}
-                        id={formIdForRender}
-                        setForm={setForm}
+                        id={formIdForRenderExp}
+                        setFormExp={setFormExp}
                     />
                 ) : null}
             </div>

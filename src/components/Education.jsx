@@ -2,8 +2,7 @@ import EducationForm from "./EducationForm";
 import { useState } from "react";
 import '../styles/Education.css'
 
-export default function Education({educations, setEducations}) {
-    const [formIdForRender, setForm] = useState(null)
+export default function Education({educations, setEducations, formIdForRenderEdu, setFormEdu}) {
     const [id, setId] = useState('a')
     const handleClick = () => {
         setEducations(
@@ -17,18 +16,18 @@ export default function Education({educations, setEducations}) {
     }
 
     const ShowForm = (el) => {
-        if (formIdForRender === null) {
-            setForm(el)
+        if (formIdForRenderEdu === null) {
+            setFormEdu(el)
         }
-        else if (formIdForRender !== null && el !== formIdForRender) {
-            setForm(el)
+        else if (formIdForRenderEdu !== null && el !== formIdForRenderEdu) {
+            setFormEdu(el)
         }
-        else setForm(null)
+        else setFormEdu(null)
     }
 
     Object.keys(educations).map((el) => {
-        if (educations[el].name === '' && (formIdForRender === null || formIdForRender !== el)) {
-            setForm(el)
+        if (educations[el].name === '' && (formIdForRenderEdu === null || formIdForRenderEdu !== el)) {
+            setFormEdu(el)
         }
     })
 
@@ -46,12 +45,12 @@ export default function Education({educations, setEducations}) {
                 <div className="button-cont">
                     <button onClick={handleClick}><i id="button-i">+</i><p>Education</p></button>
                 </div>
-                {formIdForRender !== null ? (
+                {formIdForRenderEdu !== null ? (
                     <EducationForm
                         educations={educations}
                         setEducations={setEducations}
-                        id={formIdForRender}
-                        setForm={setForm}
+                        id={formIdForRenderEdu}
+                        setFormEdu={setFormEdu}
                     />
                 ) : null}
             </div>

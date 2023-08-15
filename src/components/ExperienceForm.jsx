@@ -1,15 +1,15 @@
 import '../styles/Education.css'
 
-export default function ExperienceForm({experiences, setExperiences, id, setForm}) {
+export default function ExperienceForm({experiences, setExperiences, id, setFormExp}) {
     const deleteId = (key) => {
         const newEd = {...experiences}
         delete newEd[key]
-        setForm(null)
+        setFormExp(null)
         setExperiences(newEd)
     }
     return (
         <section className='education-form'>
-            <form action="" onSubmit={(e) => {e.preventDefault(); setForm(null)}}>
+            <form action="" onSubmit={(e) => {e.preventDefault(); setFormExp(null)}}>
                 <label>
                     <p>Company Name</p>
                     <input 

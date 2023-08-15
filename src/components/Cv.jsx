@@ -16,7 +16,7 @@ export default function Cv({educations, name, email, number, loc}) {
               <p className='edu-p'>Education</p>
               {Object.keys(educations).map((el) => {
               return (
-                <div className='edu-info'>
+                <div className='edu-info' key={el + 'edu'}>
                   <div className='edu-date'>
                     {educations[el].date}
                   </div>
