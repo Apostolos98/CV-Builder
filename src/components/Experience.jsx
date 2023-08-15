@@ -3,13 +3,15 @@ import { useState } from "react";
 import '../styles/Education.css';
 
 export default function Experience({experiences, setExperiences, formIdForRenderExp, setFormExp}) {
-    const [id, setId] = useState('a')
+    const [id, setId] = useState('aa')
     const handleClick = () => {
         setExperiences(
              {...experiences, [id]: {
                 name: '',
-                degree: '',
-                date: '',
+                position: '',
+                endDate:'',
+                startDate: '',
+                desc:''
             }}
         )        
         setId(id + 'a')

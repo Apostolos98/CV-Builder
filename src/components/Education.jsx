@@ -3,7 +3,7 @@ import { useState } from "react";
 import '../styles/Education.css'
 
 export default function Education({educations, setEducations, formIdForRenderEdu, setFormEdu}) {
-    const [id, setId] = useState('a')
+    const [id, setId] = useState('aa')
     const handleClick = () => {
         setEducations(
              {...educations, [id]: {
@@ -14,6 +14,7 @@ export default function Education({educations, setEducations, formIdForRenderEdu
         )        
         setId(id + 'a')
     }
+    console.log(educations, id)
 
     const ShowForm = (el) => {
         if (formIdForRenderEdu === null) {
