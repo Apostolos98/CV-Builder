@@ -1,12 +1,13 @@
 import '../styles/Example.css'
 
-export default function Example({setEducations, setName, setEmail, setLoc, setNumber}) {
+export default function Example({setEducations, setName, setEmail, setLoc, setNumber, setExperiences}) {
     const handleClear = () => {
         setEducations({})
         setEmail('')
         setLoc('')
         setName('')
         setNumber('')
+        setExperiences({})
     }
 
     const handleLoad = () => {
@@ -15,6 +16,14 @@ export default function Example({setEducations, setName, setEmail, setLoc, setNu
         setLoc('Athens')
         setNumber(306912345678)
         setEducations({'a': {name:'National and Kapodistrian University of Athens', degree: 'Bachelors in Economics', date:'2016-12-20'}})
+        setExperiences({'a': 
+                        {
+                            name:'EcoTech Innovations Ltd',
+                            position:'Analyst',
+                            startDate: '2020-04-10',
+                            endDate: '2022-05-09',
+                            desc: 'Assisted lead economists in analyzing market trends for sustainable technologies. Developed and tested economic models, refining accuracy. Generated user-friendly guides for efficient integration of new analysts.'
+                        }})
     }
     return (
         <div className="example-cont">

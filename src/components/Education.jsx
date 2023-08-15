@@ -1,5 +1,6 @@
 import EducationForm from "./EducationForm";
 import { useState } from "react";
+import '../styles/Education.css'
 
 export default function Education({educations, setEducations}) {
     const [formIdForRender, setForm] = useState(null)
