@@ -36,7 +36,7 @@ function App() {
         <Education educations={educations} setEducations={setEducations} formIdForRenderEdu={formIdForRenderEdu} setFormEdu={setFormEdu}/>
         <Experience experiences={experiences} setExperiences={setExperiences} formIdForRenderExp={formIdForRenderExp} setFormExp={setFormExp}/>
       </div>
-      <Cv name={name} email={email} number={number} loc={loc} educations={educations}/>
+      <Cv name={name} email={email} number={number} loc={loc} educations={educations} experiences={experiences}/>
     </div>
   )
 }

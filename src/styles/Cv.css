@@ -60,15 +60,12 @@
 }
 
 .edu-uni-degree > p:nth-child(1) {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 15px;
+    font-weight:600;
 }
 
 .edu-uni-degree > p:nth-child(2) {
-    font-weight: 500;
-    font-size: 18px;
-    margin-top: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 17px;
 }
 
 .fa-solid {
