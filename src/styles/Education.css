@@ -1,9 +1,10 @@
 section.education-form {
-    padding: 23px;
+    padding: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: white;
-    width: 91%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 section.education-form > form {
@@ -15,6 +16,7 @@ section.education-form > form {
     background-color: white;
     border-radius: 10px;
     margin-top: 40px;
+    flex: 1 1;
 }
 
 .button-cont > button {
@@ -96,4 +98,8 @@ section.education-form > form {
     font-size: 14px;
     position: absolute;
     right: 0;
+}
+
+textarea.exp-textarea {
+    width: 100%;
 }

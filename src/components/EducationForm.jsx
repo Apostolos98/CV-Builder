@@ -30,7 +30,7 @@ export default function EducationForm({educations, setEducations, id, setFormEdu
                     />
                 </label>
                 <label>
-                    <p>Date</p>
+                    <p>Graduation Date</p>
                     <input 
                         type="date" 
                         placeholder='Graduation Date' 

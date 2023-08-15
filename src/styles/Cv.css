@@ -28,6 +28,7 @@
 .cv-p-cont {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cv-p-cont > p {

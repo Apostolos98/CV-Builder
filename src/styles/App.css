@@ -46,5 +46,8 @@ label {
 }
 
 .first-col {
-    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    flex: 1 0;
 }

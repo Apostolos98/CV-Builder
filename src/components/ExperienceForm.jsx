@@ -48,7 +48,7 @@ export default function ExperienceForm({experiences, setExperiences, id, setForm
                 <label>
                     <p>Job description</p>
                     <textarea 
-                        cols="60" 
+                        className='exp-textarea' 
                         rows="10"
                         type="text"  
                         value={experiences[id].desc} 
