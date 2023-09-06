@@ -6,6 +6,11 @@
     flex: 1 1;
 }
 
+.col-2 {
+    display: flex;
+    flex: 1 1;
+}
+
 .cv-cont {
     background-color: white;
     min-height: 1000px;
@@ -71,4 +76,12 @@
 
 .fa-solid {
     margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .cv {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
 }

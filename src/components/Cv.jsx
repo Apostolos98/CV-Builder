@@ -2,7 +2,8 @@ import '../styles/Cv.css'
 
 export default function Cv({educations, name, email, number, loc, experiences}) {
     return (
-    <div className='cv'>
+      <div className='col-2'>
+        <div className='cv'>
         <div className="cv-cont">
           <div className='cv-info'>
             <p className='first'>{name}</p>
@@ -46,6 +47,7 @@ export default function Cv({educations, name, email, number, loc, experiences}) 
             })}
           </div>
         </div>
+      </div>
       </div>
     )
 }
