@@ -52,7 +52,7 @@ export default function ExperienceForm({experiences, setExperiences, id, setForm
                         rows="10"
                         type="text"  
                         value={experiences[id].desc} 
-                        onChange={(e) => setExperiences({...experiences, [id]:{...experiences[id], startDate:e.target.value}})}>
+                        onChange={(e) => setExperiences({...experiences, [id]:{...experiences[id], desc: e.target.value}})}>
                     </textarea>
                 </label>
                 <div className='buttons-save-del-cont'>
